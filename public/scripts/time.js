@@ -25,3 +25,18 @@ var x = setInterval(function() {
     document.getElementById("satTime").innerHTML = "FINISHED";
   }
 }, 1000);
+
+let count = 0;
+
+function whatsMyName() { // picks a random name each second
+    let names = ["Enemi.", "Tobi.", "Eminem?", "A Streamer?", "A YouTuber?", "idk...."];
+    count++;
+
+    document.getElementById("myName").innerHTML = "Hi, I'm " + names[count % (names.length)];
+
+    if (count > 100) {
+      count = 0;
+    }
+}
+
+setInterval(whatsMyName, 1000);

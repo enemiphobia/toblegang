@@ -1,35 +1,29 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The web site of tobleferns</title>
-    <!-- The style.css file allows you to change the look of your web pages.
-         If you include the next line in all your web pages, they will all share the same look.
-         This makes it easier to make new pages for your site. -->
-    <link href="/public/style.css" rel="stylesheet" type="text/css" media="all">
+    <title>YUHHHHHHHHHHHHHHHHHHHHHHHHHHHHH</title>
+    
+    <link href="/public/stylesheets/style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!-- <?php require_once('Includes/nav.html'); ?> -->
   </head>
   <body>
 
-    <nav>
-      <ul>
-        <li><a href="#" class="navbar">About me</a></li>
-        <li><a href="#" class="navbar">Socials</a></li>
-        <li><a href="#" class="navbar">Hall of Fame</a></li>
-        <li><a href="#" class="navbar">KEEP IN TOUCH</a></li>
-      </ul>
-    </nav>
-
+    <!-- this gets replaced by the navigation bar in nav.html -->
+    <!-- <h1 style="text-align: center; font-size: 64px;">a</h1> -->
+    <div id="replace_with_navbar"></div><br>
     
     <h1 style="text-align: center; font-size: 64px;"><em>holy moly it's my website</em></h1>
     
     <div class="parallax">
-      <span style="font-size: 64px;">dis is me</span>
-      <!-- <br> -->
+      <span class="blurText" style="font-size: 64px; z-index: 20;" id="myName">Hi, I'm Enemi.</span>
       <!-- <span style="font-size: 32px;">say hi</span> -->
     </div>
 
-    <!--  -->
+
     <div style="height:1024px;background-color:#dd7bb7;font-size:36px">
       <br><br>
       <p id="satTime" style="font-size: 32px"></p>
@@ -37,6 +31,12 @@
     </div>
 
     
-    <script src="/public/time.js"></script>
+    <script src="/public/scripts/time.js"></script>
+    <!-- replaces with navbar -->
+    <script>
+      $(function(){
+        $("#replace_with_navbar").load("/public/nav.html");
+      });
+      </script>
   </body>
 </html>

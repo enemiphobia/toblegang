@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hall of Fame</title>
+        <!-- The style.css file allows you to change the look of your web pages.
+             If you include the next line in all your web pages, they will all share the same look.
+             This makes it easier to make new pages for your site. -->
+        <link href="/public/stylesheets/hof.css" rel="stylesheet" type="text/css" media="all">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      </head>
+    <body class="hofbody">
+
+        <!-- nav bar -->
+        <!-- nav bar -->
+        <div id="replace_with_navbar"></div>
+        <!-- nav bar -->
+
+        <br><br><br><br>
+        <div class="parallax">
+          <span style="text-align: center; font-size: 64px;"><em>Hall of Fame</em><br>
+          <span style="text-align: center;
+          font-size: 24px;
+          margin-top: 0px;
+          font-weight: 100;
+          padding-top: 30px;
+          padding-left: 0; padding-right: 0;
+          color: var(--hof-gold);"
+          >An entire page dedicated to awesome people.</h2>
+        </div>
+        <br><br>
+
+        <!-- 
+        ADD NAMES HERE
+        THIS IS THE HALL OF FAME SECTION
+        -->
+        <div class="awesomePPL">
+          <h1 style="text-align: center; font-size: 28px;">Hall of Fame<br></h1><br>
+          <li>yall: supporting what i do</li><br>
+          <li>placeholder: placeholder</li><br>
+          <li>placeholder: placeholder</li><br>
+          <li>placeholder: placeholder</li><br>
+          <li>placeholder: placeholderaaaaaaaaaaa</li><br>
+        </div>
+        
+
+        <br><br><div class="socialbtn">
+            <a class="btn" href="https://www.youtube.com/@Enemiii" target="_blank" >YouTube</a>
+            <a class="btn" href="https://www.twitter.com/@tobleronemyfav" target="_blank" >Twitter<br>(screw x)</a>
+            <a class="btn" href="https://www.twitch.tv/enemiphobia" target="_blank" >Twitch</a>
+            <br>
+            <a class="btn" href="https://discord.gg/cxmZm2mCYE" target="_blank" >Discord</a>
+            <a class="btn" id="riot" href="javascript:copyToClipboard()">Riot ID<br>(ctrl+c)</a>
+            <a class="btn" href="https://www.youtube.com/@axeohlotl1010" target="_blank" >? ? ? ? ?</a>
+        </div>
+        <script src="/public/scripts/copy.js"></script>
+        <script>
+            $(function(){
+              $("#replace_with_navbar").load("/public/nav.html");
+            });
+            </script>
+    </body>
+</html>

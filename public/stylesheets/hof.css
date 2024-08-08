@@ -1,0 +1,141 @@
+/* basically imports everything from style.css into here, so less copy-pasting :) */
+@import url("style.css"); 
+
+/* global variables with colors & transitions */
+:root {
+    --primary-color: #dd7bb7;
+    --secondary-color: #ffb2ff;
+    --dark-color: #9c4787;
+    --hof-primary: #8f563b;
+    --hof-secondary: #663931;
+    --hof-gold: #e0ab1f;
+    --hof-gold-secondary: #c16b03;
+    --hof-gold-light: #fbd736;
+  }
+
+body {
+    background-color: var(--hof-secondary);
+    color: var(--hof-gold-light);
+    font-family: "daydream";
+}
+
+/* the text INSIDE of the parallax bg */
+span {
+  background-color: #00000000;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 25%;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("/public/images/hall of fame sketch.png");
+
+  /* alignment */
+  align-items: center;
+  margin: auto;
+  /* Set a specific height */
+  text-align: center;
+  min-height: 1024px;
+  line-height: 1024px; /* makes the text height centered */
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+/* NAVIGATION BAR but different colors */
+
+nav {
+    /* margin-top: 200px; */
+    /* text-align: center; */
+    position: fixed;
+    margin-bottom:25px;
+    z-index: 1;
+  }
+  
+  nav ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 5px;
+    /* transform: skew(-25deg); */
+    
+  }
+  
+  nav ul li {
+    background-color: var(--hof-primary);
+    float: left;
+    /* border: 4px solid #ffffff; */
+    /* box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.5); */
+    /* text-transform: uppercase; */
+    display: flex;
+    color: var(--hof-gold-secondary);
+    font-weight: 200;
+    transition: all 0.1s linear;
+  }
+  
+  nav ul li:hover {
+    background-color: var(--hof-gold);
+    color: #fff;
+  }
+
+  /* button code */
+  .btn {
+    width:200px;
+    height:100px;
+    background:-webkit-gradient( linear, left top, left bottom,
+    color-stop(0.05, var(--hof-primary)),
+    color-stop(1, var(--hof-secondary)) );
+    /* background-color:#fff; */
+    /* border-radius:6px; */
+    /* border:1px solid #dcdcdc; */
+    display: flex;
+    flex-direction: column-reverse;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color:var(--hof-gold-secondary);
+    font-size:18px;
+    font-weight:700;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:2px 2px 0 #000000;
+    font-weight: 500;
+    /* transitions for hover effect */
+    transition: all 0.5s ease-in-out 0s;
+    transition-timing-function: cubic-bezier(0,1.07,.51,.95);
+  }
+  
+  .btn:hover {
+    font-size: 20px;
+  }
+  
+  .btn:active {
+    font-size: 16px;
+    color:var(--secondary-color);
+  }
+
+  /* CUSTOM SCROLLBAR */
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--hof-gold-secondary);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--hof-gold);
+  border-radius: 10px;
+  border: 3px none #ffffff;
+}
+
+li {
+  text-shadow:2px 2px 0 #000000;
+}

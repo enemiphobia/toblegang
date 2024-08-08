@@ -1,0 +1,239 @@
+:root {
+  --primary-color: #dd7bb7;
+  --secondary-color: #ffb2ff;
+  --dark-color: #9c4787;
+  --hof-primary: #8f563b;
+  --hof-secondary: #663931;
+  --hof-gold: #e0ab1f;
+  --hof-gold-secondary: #c16b03;
+  --hof-gold-light: #fbd736;
+}
+
+html {
+  /* STOP FUCKING HIGHLIGHTING SHIT IT'S ANNOYING */
+  scroll-behavior: smooth;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: white;
+  font-family: "daydream";
+
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+body, html {
+  height: 20%;
+}
+
+.parallax {
+   /* The image used */
+   background-image: url("/public/images/enemi banner 2.0 1080p.png");
+   /* Create the parallax scrolling effect */
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   z-index: 0;
+
+  align-items: center;
+  margin: auto;
+  /* Set a specific height */
+  text-align: center;
+  min-height: 1024px;
+  line-height: 1024px; /* makes the text height centered */
+  mask: linear-gradient(to bottom, white 55%, transparent);
+  mask-position: fixed;
+}
+
+/* unused */
+.parallax .blur {
+  /* blur bg */
+  -webkit-filter: blur(8px);
+  -moz-filter: blur(8px);
+  -o-filter: blur(8px);
+  -ms-filter: blur(8px);
+  filter: blur(8px);
+} 
+
+/* unused */
+.opacity {
+  height:100%;
+  overflow:hidden;
+  position:relative;
+  z-index: 10;
+}
+
+/* .blur {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+} */
+
+/* if the element has the parallax class but doesn't blur,
+basically the text inside of the parallax div */
+span {
+  z-index: 10;
+  background-color: #00000000;
+  /* backdrop-filter: blur(8px); */
+  /* -webkit-backdrop-filter: blur(8px); */
+  /* top and bottom | left and right */
+  padding: 25%;
+
+  /* margin: 0; */
+  white-space: nowrap;
+  text-align: center;
+  box-sizing: border-box;
+  
+}
+
+h1, h2, p, span {
+  text-shadow: 3px 6px 5px rgb(21, 21, 21);
+}
+
+span { /* used for centered text like the "dis is me" text*/
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
+#satTime {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 0px;
+}
+
+@font-face {
+  font-family: "minecraftia";
+  src: url("/public/fonts/Minecraftia-Regular.ttf");
+  font-family: "daydream";
+  src: url("/public/fonts/Daydream.ttf");
+  font-family: "rainyhearts";
+  src: url("/public/fonts/rainyhearts.ttf");
+}
+
+nav {
+  /* margin-top: 200px; */
+  /* text-align: center; */
+  position: fixed;
+  margin-bottom:25px;
+  z-index: 999999;
+}
+
+nav ul {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 5px;
+  /* transform: skew(-25deg); */
+  
+}
+
+nav ul li {
+  background-color: var(--secondary-color);
+  float: left;
+  /* border: 4px solid #ffffff; */
+  /* box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.5); */
+  /* text-transform: uppercase; */
+  display: flex;
+  color: var(--dark-color);
+  font-weight: 200;
+  transition: all 0.1s linear;
+}
+
+nav ul li:hover {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.navbar { /* hyperlinks */
+  font-size: 25px;
+  color: inherit;
+  display: block;
+  padding: 25px 25px;
+  text-decoration: none;
+  /* transform: skew(25deg); */
+}
+
+/*  top-left  top-right   bottom-right  bottom-left */
+nav ul li:first-child {
+  border-radius: 7px 0 0 7px;
+}
+
+nav ul li:last-child {
+  border-radius: 0 7px 7px 0;
+}
+
+.btn {
+  width:200px;
+  height:100px;
+  background:-webkit-gradient( linear, left top, left bottom,
+  color-stop(0.05, var(--secondary-color)),
+  color-stop(1, var(--primary-color)) );
+  background-color:#fff;
+  /* border-radius:6px; */
+  /* border:1px solid #dcdcdc; */
+  display: flex;
+  flex-direction: column-reverse;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  color:var(--dark-color);
+  font-size:18px;
+  font-weight:700;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:2px 2px 0 #fff;
+  font-weight: 500;
+  /* transitions for hover effect */
+  transition: all 0.5s ease-in-out 0s;
+  transition-timing-function: cubic-bezier(0,1.07,.51,.95);
+}
+
+.btn:hover {
+  font-size: 20px;
+}
+
+.btn:active {
+  font-size: 16px;
+  color:var(--secondary-color);
+}
+
+.socialbtn {
+  padding: 20px;
+  text-align: center;
+  /* use FLEX to center entire div element */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* don't wrap the fucking text */
+  white-space: nowrap;
+}
+
+/* CUSTOM SCROLLBAR */
+
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--dark-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: 3px none #ffffff;
+}

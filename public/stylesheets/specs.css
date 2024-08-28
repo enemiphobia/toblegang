@@ -1,0 +1,46 @@
+/* basically imports everything from style.css into here, so less copy-pasting :) */
+@import url("style.css"); 
+
+/* global variables with colors & transitions */
+:root {
+    --primary-color: #463954;
+    --secondary-color: #9470dd;
+    --dark-color: #1d1c2e;
+    --hof-primary: #8f563b;
+    --hof-secondary: #663931;
+    --hof-gold: #e0ab1f;
+    --hof-gold-secondary: #c16b03;
+    --hof-gold-light: #fbd736;
+  }
+
+  body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: "daydream";
+}
+
+.navbar { /* hyperlinks */
+    font-size: 25px;
+    color: inherit;
+    display: block;
+    padding: 25px 25px;
+    text-decoration: none;
+    text-shadow:3px 3px 0 #ffffffa8;
+    /* text-shadow:3px 3px 0 #101011a8; */
+    /* transform: skew(25deg); */
+  }
+
+  .navbar:hover { /* hyperlinks */
+    font-size: 25px;
+    color: inherit;
+    display: block;
+    padding: 25px 25px;
+    text-decoration: none;
+    text-shadow:3px 3px 0 #101011a8;
+    /* transform: skew(25deg); */
+  }
+  
+  li {
+    text-shadow:3px 3px 0 #101011a8;
+    list-style-type: none;
+  }

@@ -48,24 +48,6 @@ span {
 
 
 /* NAVIGATION BAR but different colors */
-
-nav {
-    /* margin-top: 200px; */
-    /* text-align: center; */
-    position: fixed;
-    margin-bottom:25px;
-    z-index: 1;
-  }
-  
-  nav ul {
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    padding-left: 10px;
-    padding-top: 5px;
-    /* transform: skew(-25deg); */
-    
-  }
   
   nav ul li {
     background-color: var(--hof-primary);

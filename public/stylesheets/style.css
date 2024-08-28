@@ -26,10 +26,29 @@ body {
   padding: 0;
   margin: 0;
   text-align: center;
+
+  /* for transition.js */
+  opacity: 0;
+
+  /* for moving page up smoothly */
+  animation-name            : displaceContent;
+  animation-duration        : 1s;
+  animation-iteration-count : 1;
+  animation-fill-mode       : forwards;
+
+  /* opacity transition */
+  transition: opacity .5s;
+  transition-timing-function: cubic-bezier(.04,.43,.12,.93);
 }
 
 body, html {
   height: 20%;
+}
+
+/* this animation is manually created to make html page smoothly move up */
+@keyframes displaceContent {
+  from { transform : translateY(50px) }
+  to   { transform : translateY(0px) } /* slide down to make room for advertisements */
 }
 
 .parallax {
@@ -74,6 +93,14 @@ body, html {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 } */
+
+/* the title of the website */
+.title {
+  animation: rainbow 2.5s linear;
+	animation-iteration-count: infinite;
+  /* transition: all 0.5s ease-in-out 0s;
+  transition-timing-function: cubic-bezier(0,1.07,.51,.95); */
+}
 
 /* if the element has the parallax class but doesn't blur,
 basically the text inside of the parallax div */
@@ -123,18 +150,25 @@ span { /* used for centered text like the "dis is me" text*/
   src: url("/public/fonts/rainyhearts.ttf");
 }
 
-nav {
+nav {  
   /* margin-top: 200px; */
   /* text-align: center; */
-  position: fixed;
+  /* position: fixed; */
+  /* transform: translate(-50%, -50%); */
+  display: inline-block;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  
   margin-bottom:25px;
   z-index: 999999;
+  filter: drop-shadow(20px 20px 4px #10101146);
 }
 
 nav ul {
   display: inline-block;
   list-style: none;
-  margin: 0;
+  margin: 0 auto;
   padding-left: 10px;
   padding-top: 5px;
   /* transform: skew(-25deg); */
@@ -164,6 +198,7 @@ nav ul li:hover {
   display: block;
   padding: 25px 25px;
   text-decoration: none;
+  text-shadow:3px 3px 0 #101011a8;
   /* transform: skew(25deg); */
 }
 
@@ -236,4 +271,84 @@ nav ul li:last-child {
   background-color: var(--primary-color);
   border-radius: 10px;
   border: 3px none #ffffff;
+}
+
+/* KEYFRAME ANIMATIONS */
+
+@keyframes rainbow-bg{
+  100%,0%{
+    background-color: rgb(255,0,0);
+  }
+  8%{
+    background-color: rgb(255,127,0);
+  }
+  16%{
+    background-color: rgb(255,255,0);
+  }
+  25%{
+    background-color: rgb(127,255,0);
+  }
+  33%{
+    background-color: rgb(0,255,0);
+  }
+  41%{
+    background-color: rgb(0,255,127);
+  }
+  50%{
+    background-color: rgb(0,255,255);
+  }
+  58%{
+    background-color: rgb(0,127,255);
+  }
+  66%{
+    background-color: rgb(0,0,255);
+  }
+  75%{
+    background-color: rgb(127,0,255);
+  }
+  83%{
+    background-color: rgb(255,0,255);
+  }
+  91%{
+    background-color: rgb(255,0,127);
+  }
+}
+
+@keyframes rainbow{
+  100%,0%{
+    color: rgb(255, 112, 112);
+  }
+  8%{
+    color: rgb(255, 180, 104);
+  }
+  16%{
+    color: rgb(255, 255, 142);
+  }
+  25%{
+    color: rgb(193, 255, 130);
+  }
+  33%{
+    color: rgb(135, 255, 135);
+  }
+  41%{
+    color: rgb(121, 255, 188);
+  }
+  50%{
+    color: rgb(138, 255, 255);
+  }
+  58%{
+    color: rgb(123, 189, 255);
+  }
+  66%{
+    color: rgb(127, 127, 255);
+  }
+  75%{
+    color: rgb(190, 125, 255);
+  }
+  83%{
+    color: rgb(255, 133, 255);
+  }
+  91%{
+    color: rgb(255, 120, 188);
+  }
 }

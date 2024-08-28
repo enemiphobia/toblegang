@@ -1,10 +1,17 @@
-<nav style="margin-left: 10px; text-shadow:2px 2px 4px #000000;">
+<nav style=" text-shadow:2px 2px 4px #000000; justify-content: center; margin: auto; ">
+  <style>
+    span {
+      text-shadow:2px 2px 4 #10101146;
+    }
+  </style>
     <ul>
-      <li><a href="/public/index.html" class="navbar">Home</a></li>
-      <li><a href="/public/socials.html" class="navbar">Socials</a></li>
-      <li><a href="/public/hof.html" class="navbar">Hall of Fame</a></li>
-      <li><a href="#" class="navbar">Minigame</a></li>
-      <li><a href="https://discord.gg/cxmZm2mCYE" target="_blank" class="navbar">KEEP IN TOUCH</a></li>
+      <li><span onclick="transitionToPage('/public/index.html')" class="navbar">Home</span></li>
+      <li><span onclick="transitionToPage('/public/socials.html')" class="navbar">Socials</span></li>
+      <li><span onclick="transitionToPage('/public/specs.html')" class="navbar">Specs</span></li>
+      <li><span onclick="transitionToPage('/public/hof.html')" class="navbar">Hall of Fame</span></li>
+      <li><span onclick="transitionToPage('#')" class="navbar">Minigame</a></li>
+      <li><span onclick="transitionToPage('https://discord.gg/cxmZm2mCYE')" target="_blank" class="navbar">KEEP IN TOUCH</span></li>
     </ul>
   </nav>
+  <script src="/public/scripts/transition.js"></script>
 <br><br>

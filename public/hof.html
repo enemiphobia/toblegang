@@ -9,10 +9,34 @@
              This makes it easier to make new pages for your site. -->
         <link href="/public/stylesheets/hof.css" rel="stylesheet" type="text/css" media="all">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <audio id="player"  class="mediaplayerclass">
+          <source data-songindex="1" title="ANOTHER HIM - Toby Fox" src="/public/sounds/ANOTHER HIM.mp3" />
+        </audio>
       </head>
     <body class="hofbody">
+        <div class="playermenuwrapper">
+          <!-- <button id="previoussong" class="previoussongclass">
+            Previous
+          </button> -->
+            <div id="songtitle" class="titleclass"></div><br>
+            <button id="playpause" class="mediabtn"
+            style="width: 130px;
+            height: 60px;
+            border: 0;
+            border-radius: 10px;
+            margin:0 auto;
+            text-align: center;
+            display: flex;
+            text-align: center;
+            ">
+            Pause
+            </button>
+          <!-- <button id="nextsong" class="nextsongclass">
+            Next
+          </button> -->
+          </div><br>
 
-        <!-- nav bar -->
+          <!-- nav bar -->
         <!-- nav bar -->
         <div id="replace_with_navbar"></div><br>
         <!-- nav bar -->
@@ -35,13 +59,46 @@
         ADD NAMES HERE
         THIS IS THE HALL OF FAME SECTION
         -->
-        <div class="awesomePPL">
-          <h1 style="text-align: center; font-size: 28px;">Hall of Fame<br></h1><br>
-          <li>yall: supporting what i do</li><br>
-          <li>placeholder: placeholder</li><br>
-          <li>placeholder: placeholder</li><br>
-          <li>placeholder: placeholder</li><br>
-          <li>placeholder: placeholderaaaaaaaaaaa</li><br>
+        <h1 style="text-align: center; font-size: 42px; color: var(--hof-gold-light)">Hall of Fame<br></h1><br>
+        <div class="awesomePPL" style="margin-left: 15px; margin-right: 15px;">
+          <div class="box">
+            <h2>Middle School Homies</h2>
+            <p>
+              bayfourdu: awesome car swimmer weeb person, very talented kid; been w me since 2nd grade
+            </p>
+            <p>
+              <strong>ChessBlitzer:</strong> insane chess player, intelligent soul & is prob the reason why
+              i know how to program in the first place
+            </p>
+            <p>
+              <strong>El Paulied II:</strong> very stronk climber & also generally funny and smart dude;
+              real og and encouraged me to pursue my hobbies more
+            </p>
+            <p>
+              <strong>Santi/Haze/Twisted:</strong> awesome and funny soul (unc :D);
+              this is the dude i have to blame for getting me into <strong>valorant</strong>
+            </p>
+          </div>
+          
+          <div class="box">
+            <h2>Online Friends</h2>
+            <p>camo: awesome person, very funny and creative;
+              got me into a lot of cool things</p>
+          </div>
+          <div class="middle-column">
+            <div class="box" style="justify-content: center; top: 50%; transform: translate(0, -50);">
+              <h1>thank yall for supporting what i do</h1>
+            </div>
+            <div class="box" style="justify-content: center; top: 50%; transform: translate(0, -50);">
+              <h1>my parents (obviously) for allowing me<br>to access the internet unsupervised</h1>
+            </div>
+            <div class="box">
+              <h1>my silly ass dog (her name is Stacy)</h1>
+              <img src="/public/images/stacy.jpg" width="400" height="75"></img>
+            </div>
+            <p style="padding: 5px;"><strong>lots more i gotta add later, but for now that's it</strong></p>
+          </div>
+          
         </div>
         
 
@@ -56,6 +113,7 @@
         </div>
         <script src="/public/scripts/copy.js"></script>
         <script src="/public/scripts/transition.js"></script>
+        <script src="/public/scripts/sound.js"></script>
         <script>
             $(function(){
               $("#replace_with_navbar").load("/public/nav.html");

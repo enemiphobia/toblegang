@@ -11,6 +11,7 @@
     --hof-gold: #e0ab1f;
     --hof-gold-secondary: #c16b03;
     --hof-gold-light: #fbd736;
+    --hof-gold-dark: #8b4312;
   }
 
 body {
@@ -25,6 +26,75 @@ span {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   padding: 25%;
+}
+
+h1 {
+  transition-timing-function: cubic-bezier(.04,.43,.12,.93);
+  transition-duration: 0.25s;
+}
+
+h2 {
+  font-size: 36px;
+  color: var(--hof-gold);
+  transition-timing-function: cubic-bezier(.04,.43,.12,.93);
+  transition-duration: 0.25s;
+}
+
+h2:hover {
+  color: #fffff0;
+}
+
+p {
+  font-size: 24px;
+}
+
+.mediabtn {
+  font-family: "Daydream";
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--hof-primary);
+  color: var(--hof-gold-secondary);
+  text-shadow: 2px 2px 0 #00000081;
+  border-radius: 10;
+  font-size: 18px;
+  font-weight: 700;
+  padding:6px 24px;
+  text-decoration:none;
+  /* transitions for hover effect */
+  transition: all 0.5s ease-in-out 0s;
+  transition-timing-function: cubic-bezier(0,1.07,.51,.95);
+}
+
+.mediabtn:hover {
+  font-size: 20px;
+  color: #fffff0;
+}
+
+.mediabtn:active {
+  font-size: 16px;
+  color:var(--hof-gold);
+}
+
+#songtitle {
+  font-size: 16px;
+  color: var(--hof-gold);
+  transition-timing-function: cubic-bezier(.04,.43,.12,.93);
+  transition-duration: 0.25s;
+}
+
+#songtitle:hover {
+  color: #fffff0;
+}
+
+.playermenuwrapper {
+  background: #00000081;
+  padding: 10px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 50px; /* required */
+  transform: translate(0,50);
 }
 
 .parallax {
@@ -65,6 +135,24 @@ span {
     background-color: var(--hof-gold);
     color: #fff;
   }
+
+  /* flexbox made to put people into different categories (ex: irls, online friends, etc.) */
+.awesomePPL {
+  display: flex;
+  border: 10px solid var(--hof-gold-secondary);
+  text-shadow:2px 2px 0 #0000007c;
+  /* border ROUNDNESS */
+  border-radius: 10px;
+}
+
+.box {
+  flex: 1;
+  margin: 15px;
+  padding: 15px;
+  border: 5px solid var(--hof-gold-dark);
+  text-shadow:2px 2px 0 #0000007c;
+  font-family: "omorigame2";
+}
 
   /* button code */
   .btn {

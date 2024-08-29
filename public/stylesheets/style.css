@@ -35,6 +35,7 @@ body {
   animation-duration        : 1s;
   animation-iteration-count : 1;
   animation-fill-mode       : forwards;
+  animation-timing-function: cubic-bezier(.04,.43,.12,.93);
 
   /* opacity transition */
   transition: opacity .5s;
@@ -148,6 +149,10 @@ span { /* used for centered text like the "dis is me" text*/
   src: url("/public/fonts/Daydream.ttf");
   font-family: "rainyhearts";
   src: url("/public/fonts/rainyhearts.ttf");
+  font-family: "omorigame1";
+  src: url("/public/fonts/OMORI_GAME.ttf");
+  font-family: "omorigame2";
+  src: url("/public/fonts/OMORI_GAME2.ttf");
 }
 
 nav {  

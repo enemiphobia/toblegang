@@ -40,7 +40,24 @@ h2 {
   transition-duration: 0.25s;
 }
 
+h1, h2, p, li {
+  transition: all 0.5s ease-in-out 0s;
+  transition-timing-function: cubic-bezier(0,1.07,.51,.95);
+}
+
+h1:hover {
+  color: #fffff0;
+}
+
 h2:hover {
+  color: #fffff0;
+}
+
+p:hover {
+  color: #fffff0;
+}
+
+li:hover {
   color: #fffff0;
 }
 

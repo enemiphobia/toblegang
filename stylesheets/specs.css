@@ -6,6 +6,7 @@
     --primary-color: #463954;
     --secondary-color: #9470dd;
     --dark-color: #1d1c2e;
+    --light-color: #c6aff5;
     --hof-primary: #8f563b;
     --hof-secondary: #663931;
     --hof-gold: #e0ab1f;
@@ -16,7 +17,7 @@
   body {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    font-family: "daydream";
+    font-family: "Daydream";
 }
 
 .navbar { /* hyperlinks */
@@ -43,4 +44,62 @@
   li {
     text-shadow:3px 3px 0 #101011a8;
     list-style-type: none;
+  }
+
+  .listbtn {
+    font-family: "Daydream";
+    width: 130px;
+    height: 75px;
+    border: 0;
+    border-radius: 10px;
+    margin:0 auto;
+    text-align: center;
+    display: flex;
+    background-color: var(--secondary-color);
+    flex-direction: column-reverse;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    color:var(--dark-color);
+    font-size:18px;
+    font-weight:700;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:2px 2px 0 #fff;
+    font-weight: 500;
+    /* transitions for hover effect */
+    transition: all 0.5s ease-in-out 0s;
+    transition-timing-function: cubic-bezier(0,1.07,.51,.95);
+  }
+
+  .listbtn:hover {
+    font-size: 22px;
+    background-color: var(--light-color);
+  }
+
+  .listbtn:active {
+    font-size: 16px;
+    color: var(--secondary-color);
+    background-color: var(--dark-color);
+  }
+
+  h1, h2, p, li {
+    transition: all 0.5s ease-in-out 0s;
+    transition-timing-function: cubic-bezier(0,1.07,.51,.95);
+  }
+
+  h1:hover {
+    color: #fffff0;
+  }
+
+  h2:hover {
+    color: #fffff0;
+  }
+
+  p:hover {
+    color: #fffff0;
+  }
+
+  li:hover {
+    color: #fffff0;
   }

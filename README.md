@@ -16,8 +16,6 @@ Notes for me --------------------------------------------------------------
 * implement mobile-support
 * redo the footer (socials bar looks wack)
 * revamp the method to add songs to the music player
-* add previous and next buttons to the music player
-* make the music player it's own html file
 `
 
 To add someone to the hall of fame:

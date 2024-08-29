@@ -9,16 +9,29 @@
              This makes it easier to make new pages for your site. -->
         <link href="stylesheets/hof.css" rel="stylesheet" type="text/css" media="all">
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <audio id="player"  class="mediaplayerclass">
-          <source data-songindex="1" title="ANOTHER HIM - Toby Fox" src="public/sounds/ANOTHER HIM.mp3" />
-        </audio>
+        <link rel="icon" type="image/x-icon" href="../images/favicon ico simple 16x16.ico">
       </head>
     <body class="hofbody">
-        <div class="playermenuwrapper">
+      <audio id="player" class="mediaplayerclass">
+        <source data-songindex="1" src="sounds/ANOTHER HIM.mp3" />
+      </audio>
+        <div class="playermenuwrapper" style="display: flex;">
           <!-- <button id="previoussong" class="previoussongclass">
             Previous
           </button> -->
-            <div id="songtitle" class="titleclass"></div><br>
+          <div id="songtitle" class="titleclass" style="align-self: center; justify-content: center;"></div><br>
+            <button id="previoussong" class="mediabtn"
+            style="width: 160px;
+            height: 60px;
+            border: 0;
+            border-radius: 10px;
+            margin:0 auto;
+            display: flex;
+            text-align: center;
+            ">
+            Previous
+            </button>
+
             <button id="playpause" class="mediabtn"
             style="width: 130px;
             height: 60px;
@@ -31,9 +44,18 @@
             ">
             Pause
             </button>
-          <!-- <button id="nextsong" class="nextsongclass">
+
+            <button id="nextsong" class="mediabtn"
+            style="width: 160px;
+            height: 60px;
+            border: 0;
+            border-radius: 10px;
+            margin:0 auto;
+            display: flex;
+            text-align: center;
+            ">
             Next
-          </button> -->
+            </button>
           </div><br>
 
           <!-- nav bar -->

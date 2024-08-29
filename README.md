@@ -15,6 +15,7 @@ Notes for me --------------------------------------------------------------
 * add everyone i need to hall of fame
 * implement mobile-support
 * redo the footer (socials bar looks wack)
+* revamp the method to add songs to the music player
 `
 
 To add someone to the hall of fame:

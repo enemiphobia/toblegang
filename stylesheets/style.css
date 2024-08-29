@@ -54,7 +54,7 @@ body, html {
 
 .parallax {
    /* The image used */
-   background-image: url("images/enemi banner 2.0 1080p.png");
+   background-image: url("../images/enemi banner 2.0 1080p.png");
    /* Create the parallax scrolling effect */
    background-attachment: fixed;
    background-position: center;

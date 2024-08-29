@@ -18,5 +18,5 @@ Notes for me --------------------------------------------------------------
 `
 
 To add someone to the hall of fame:
-* just add a <p> element and type something in it
-    (make sure it's within the "awesomePPL" div and the "box" div")
+* just add a paragraph element and type something in it
+(make sure it's within the "awesomePPL" div and the "box" div")

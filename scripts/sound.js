@@ -1,9 +1,9 @@
-window.player = document.getElementById('player');
+let player = document.getElementById('player');
 var playpause = document.getElementById('playpause');
 var songtitle = document.getElementById('songtitle');
 
 player.volume = 0.025; // suuuuper low
-player.play(); // autoplay
+
 
 
 
@@ -14,7 +14,9 @@ let sources = [
     "sounds/the%20heart%20pt%201.mp3"
 ];
 var whichSong = 0;
-let prefix = "http://127.0.0.1:5500/";
+let prefix = "https://enemiphobia.github.io/toblegang/";
+
+player.play(); // autoplay
 
 changesongtitle();
 
@@ -31,30 +33,30 @@ playpause.onclick = function () {
     }
 }
 
-previoussong.onclick = function () {
-    if (whichSong < 1) {
-        whichSong = sources.length-1;
-    } else {
-        whichSong--;
-    }
+// previoussong.onclick = function () {
+//     if (whichSong < 1) {
+//         whichSong = sources.length-1;
+//     } else {
+//         whichSong--;
+//     }
     
-    player.src = prefix + sources[whichSong];
-    player.load();
+//     player.src = prefix + sources[whichSong];
+//     player.load();
 
-    changesongtitle();
-    console.log("previous song: " + whichSong + ", " + player.src + ", " + prefix + sources[whichSong]);
-}
+//     changesongtitle();
+//     console.log("previous song: " + whichSong + ", " + player.src + ", " + prefix + sources[whichSong]);
+// }
 
-nextsong.onclick = function () {
-    if (whichSong > sources.length-2) {
-        whichSong = 0;
-    } else {
-        whichSong++;
-    }
-    player.src = sources[whichSong];
-    changesongtitle();
-    console.log("next song: " + whichSong + ", " + player.src + ", " + prefix + sources[whichSong]);
-}
+// nextsong.onclick = function () {
+//     if (whichSong > sources.length-2) {
+//         whichSong = 0;
+//     } else {
+//         whichSong++;
+//     }
+//     player.src = sources[whichSong];
+//     changesongtitle();
+//     console.log("next song: " + whichSong + ", " + player.src + ", " + prefix + sources[whichSong]);
+// }
 
 
 

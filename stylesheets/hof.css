@@ -99,7 +99,7 @@ p {
 
 .parallax {
   /* The image used */
-  background-image: url("/public/images/hall of fame sketch.png");
+  background-image: url("/images/hall of fame sketch.png");
 
   /* alignment */
   align-items: center;

@@ -54,7 +54,7 @@ body, html {
 
 .parallax {
    /* The image used */
-   background-image: url("/public/images/enemi banner 2.0 1080p.png");
+   background-image: url("/images/enemi banner 2.0 1080p.png");
    /* Create the parallax scrolling effect */
    background-attachment: fixed;
    background-position: center;
@@ -144,15 +144,15 @@ span { /* used for centered text like the "dis is me" text*/
 
 @font-face {
   font-family: "minecraftia";
-  src: url("/public/fonts/Minecraftia-Regular.ttf");
+  src: url("/fonts/Minecraftia-Regular.ttf");
   font-family: "daydream";
-  src: url("/public/fonts/Daydream.ttf");
+  src: url("/fonts/Daydream.ttf");
   font-family: "rainyhearts";
-  src: url("/public/fonts/rainyhearts.ttf");
+  src: url("/fonts/rainyhearts.ttf");
   font-family: "omorigame1";
-  src: url("/public/fonts/OMORI_GAME.ttf");
+  src: url("/fonts/OMORI_GAME.ttf");
   font-family: "omorigame2";
-  src: url("/public/fonts/OMORI_GAME2.ttf");
+  src: url("/fonts/OMORI_GAME2.ttf");
 }
 
 nav {  

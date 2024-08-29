@@ -24,7 +24,7 @@ function changesongtitle() {
 
 	var songtitle = document.getElementById('songtitle');
     
-	if(player.src = "/sounds/ANOTHER HIM.mp3")
+	if(player.src = "sounds/ANOTHER HIM.mp3")
     {
         songtitle.innerHTML = "Song: ANOTHER HIM - Toby Fox";
     }

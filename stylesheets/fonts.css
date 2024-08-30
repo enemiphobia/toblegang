@@ -18,8 +18,8 @@
 @font-face {
     font-family: 'omorigame';
     src: url('/fonts/omori_game-webfont.woff2') format('woff2'),
-         url('omori_game-webfont.woff') format('woff'),
-         url('OMORI_GAME.ttf') format('truetype');
+         url('/fonts/omori_game-webfont.woff') format('woff'),
+         url('/fonts/OMORI_GAME.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 

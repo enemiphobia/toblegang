@@ -1,0 +1,52 @@
+/* AUDIO PLAYER */
+
+.mediabtn {
+    font-family: "Daydream";
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-shadow: 2px 2px 0 #00000081;
+    border-radius: 10;
+    font-size: 18px;
+    font-weight: 700;
+    padding:6px 24px;
+    text-decoration:none;
+    /* transitions for hover effect */
+    transition: all 0.5s ease-in-out 0s;
+    transition-timing-function: cubic-bezier(0,1.07,.51,.95);
+  }
+  
+  .mediabtn:hover {
+    font-size: 20px;
+    color: var(--dark-color);
+  }
+  
+  .mediabtn:active {
+    font-size: 16px;
+    color:#fffff0;
+  }
+  
+  #songtitle {
+    font-size: 16px;
+    color: var(--primary-color);
+    transition-timing-function: cubic-bezier(.04,.43,.12,.93);
+    transition-duration: 0.25s;
+  }
+  
+  #songtitle:hover {
+    color: #fffff0;
+  }
+  
+  .playermenuwrapper {
+    background: #00000081;
+    padding: 10px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 50px; /* required */
+    transform: translate(0,50);
+  }
+  
+  /* END OF AUDIO PLAYER */

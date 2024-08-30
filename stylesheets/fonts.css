@@ -3,7 +3,7 @@
 
 
 @font-face {
-    font-family: 'daydreamthin';
+    font-family: 'daydream';
     src: url('daydream-webfont.woff2') format('woff2'),
          url('daydream-webfont.woff') format('woff');
     font-weight: normal;
@@ -15,7 +15,7 @@
 
 
 @font-face {
-    font-family: 'omori_game2regular';
+    font-family: 'omorigame';
     src: url('omori_game-webfont.woff2') format('woff2'),
          url('omori_game-webfont.woff') format('woff');
     font-weight: normal;
@@ -27,7 +27,7 @@
 
 
 @font-face {
-    font-family: 'omori_gameregular';
+    font-family: 'omorigame2';
     src: url('omori_game2-webfont.woff2') format('woff2'),
          url('omori_game2-webfont.woff') format('woff');
     font-weight: normal;
@@ -39,7 +39,7 @@
 
 
 @font-face {
-    font-family: 'rainyheartsmedium';
+    font-family: 'rainyhearts';
     src: url('rainyhearts-webfont.woff2') format('woff2'),
          url('rainyhearts-webfont.woff') format('woff');
     font-weight: normal;

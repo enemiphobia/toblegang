@@ -10,13 +10,14 @@ it's just a **hobby related thing** tho nothing *school related*
 
 Notes for me --------------------------------------------------------------
 
-`Goals:
+Goals:
 
 * add everyone i need to hall of fame
 * implement mobile-support
 * redo the footer (socials bar looks wack)
 * revamp the method to add songs to the music player
-`
+* change font in hall of fame to the *omori* font
+
 
 To add someone to the hall of fame:
 * just add a paragraph element and type something in it

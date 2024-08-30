@@ -1,3 +1,5 @@
+@import url('fonts.css');
+
 :root {
   --primary-color: #dd7bb7;
   --secondary-color: #ffb2ff;
@@ -8,6 +10,21 @@
   --hof-gold-secondary: #c16b03;
   --hof-gold-light: #fbd736;
 }
+
+/* the two periods and forward slash means you go back one folder*/
+/* if website link doesn't work, just use ../fonts/_____.ttf */
+/* @font-face {
+  font-family: "minecraftia";
+  src: url("https://enemiphobia.github.io/toblegang/fonts/Minecraftia-Regular.ttf");
+  font-family: "daydream";
+  src: url("https://enemiphobia.github.io/toblegang/fonts/Daydream.ttf");
+  font-family: "rainyhearts";
+  src: url("https://enemiphobia.github.io/toblegang/fonts/rainyhearts.ttf");
+  font-family: "omorigame1";
+  src: url("https://enemiphobia.github.io/toblegang/fonts/OMORI_GAME.ttf");
+  font-family: "omorigame2";
+  src: url("https://enemiphobia.github.io/toblegang/fonts/OMORI_GAME2.ttf");
+} */
 
 html {
   /* STOP FUCKING HIGHLIGHTING SHIT IT'S ANNOYING */
@@ -140,19 +157,6 @@ span { /* used for centered text like the "dis is me" text*/
   text-align: center;
   font-size: 24px;
   margin-top: 0px;
-}
-
-@font-face {
-  font-family: "minecraftia";
-  src: url("../fonts/Minecraftia-Regular.ttf");
-  font-family: "daydream";
-  src: url("../fonts/Daydream.ttf");
-  font-family: "rainyhearts";
-  src: url("../fonts/rainyhearts.ttf");
-  font-family: "omorigame1";
-  src: url("../fonts/OMORI_GAME.ttf");
-  font-family: "omorigame2";
-  src: url("../fonts/OMORI_GAME2.ttf");
 }
 
 nav {  

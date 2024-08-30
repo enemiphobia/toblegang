@@ -21,3 +21,5 @@ Notes for me --------------------------------------------------------------
 To add someone to the hall of fame:
 * just add a paragraph element and type something in it
 (make sure it's within the "awesomePPL" div and the "box" div")
+
+Note: position sticky works, but the music player stops when it reaches nav FFS

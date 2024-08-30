@@ -39,4 +39,20 @@ function whatsMyName() { // picks a random name each second
     }
 }
 
+function getAge(dateString) {
+  var today = new Date();
+  var birthDate = new Date(dateString);
+  var age = today.getFullYear() - birthDate.getFullYear();
+  var m = today.getMonth() - birthDate.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age--;
+  }
+  return age;
+}
+
+let ageCounter = document.getElementById("age");
+
+ageCounter.innerHTML = getAge("2008/08/15") + " years old (unc)";
+
 setInterval(whatsMyName, 1000);
+

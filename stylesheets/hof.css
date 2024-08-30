@@ -168,7 +168,7 @@ p {
   padding: 15px;
   border: 5px solid var(--hof-gold-dark);
   text-shadow:2px 2px 0 #0000007c;
-  font-family: "omorigame2";
+  font-family: "omorigame2", "rainyhearts";
 }
 
   /* button code */

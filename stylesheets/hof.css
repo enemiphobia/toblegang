@@ -23,8 +23,8 @@ body {
 /* the text INSIDE of the parallax bg */
 span {
   background-color: #00000000;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  /* backdrop-filter: blur(8px); */
+  /* -webkit-backdrop-filter: blur(8px); */
   padding: 25%;
 }
 
@@ -116,7 +116,7 @@ p {
 
 .parallax {
   /* The image used */
-  background-image: url("../images/hall of fame sketch.png");
+  background-image: url("../images/hall of fame sketch blurred.jpg");
 
   /* alignment */
   align-items: center;

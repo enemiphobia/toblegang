@@ -83,7 +83,8 @@ body, html {
   text-align: center;
   min-height: 1024px;
   line-height: 1024px; /* makes the text height centered */
-  mask: linear-gradient(to bottom, white 55%, transparent);
+  mask: linear-gradient(to top, white 55%, transparent);
+  -webkit-mask: -webkit-gradient(linear, left 55%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
   mask-position: fixed;
 }
 
@@ -95,7 +96,16 @@ body, html {
   -o-filter: blur(8px);
   -ms-filter: blur(8px);
   filter: blur(8px);
-} 
+}
+
+.blurText {
+  /* for moving page up smoothly */
+  animation-name            : scaleNameUp;
+  animation-duration        : 1s;
+  animation-iteration-count : 1;
+  animation-fill-mode       : forwards;
+  animation-timing-function: cubic-bezier(.04,.43,.12,.93);
+}
 
 /* unused */
 .opacity {
@@ -103,6 +113,13 @@ body, html {
   overflow:hidden;
   position:relative;
   z-index: 10;
+}
+
+#myName {
+  font-size: 56px;
+
+  transition: font-size .5s;
+  transition-timing-function: cubic-bezier(.04,.43,.12,.93);
 }
 
 /* .blur {

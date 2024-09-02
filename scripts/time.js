@@ -29,6 +29,10 @@ var x = setInterval(function() {
 let count = 0;
 
 function whatsMyName() { // picks a random name each second
+    var name = document.getElementById("myName");
+
+    // name.style.fontSize = "56px"; 
+
     let names = ["Enemi.", "Tobi.", "Eminem?", "A Streamer?", "A YouTuber?", "idk....", "melon :>"];
     count++;
 
@@ -37,6 +41,9 @@ function whatsMyName() { // picks a random name each second
     if (count > 100) {
       count = 0;
     }
+
+    
+    name.style.fontSize = "64px"; 
 }
 
 function getAge(dateString) {
@@ -54,5 +61,4 @@ let ageCounter = document.getElementById("age");
 
 ageCounter.innerHTML = getAge("2008/08/15") + " years old (unc)";
 
-setInterval(whatsMyName, 1000);
-
+setInterval(whatsMyName, 1000); // change name every second

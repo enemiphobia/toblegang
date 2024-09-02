@@ -115,6 +115,7 @@ body, html {
   z-index: 10;
 }
 
+/* tried adding transitions that scaled up the text like a subtitle pop in each second but it didn't work :( */
 #myName {
   font-size: 56px;
 

@@ -3,9 +3,9 @@
 
 /* @font-face {
     font-family: 'Minecraftia-Regular';
-    src: url('/fonts/daydream-webfont.woff2') format('woff2'),
-         url('/fonts/daydream-webfont.woff') format('woff'),
-         url('/fonts/Daydream.ttf') format('truetype');
+    src: local('/fonts/daydream-webfont.woff2') format('woff2'),
+         local('/fonts/daydream-webfont.woff') format('woff'),
+         local('/fonts/Daydream.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -13,9 +13,9 @@
 
 @font-face {
     font-family: 'daydream';
-    src: url('/fonts/daydream-webfont.woff2') format('woff2'),
-         url('/fonts/daydream-webfont.woff') format('woff'),
-         url('/fonts/Daydream.ttf') format('truetype');
+    src: local('/fonts/daydream-webfont.woff2') format('woff2'),
+         local('/fonts/daydream-webfont.woff') format('woff'),
+         local('/fonts/Daydream.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -26,9 +26,9 @@
 
 @font-face {
     font-family: 'omorigame';
-    src: url('/fonts/omori_game-webfont.woff2') format('woff2'),
-         url('/fonts/omori_game-webfont.woff') format('woff'),
-         url('/fonts/OMORI_GAME.ttf') format('truetype');
+    src: local('/fonts/omori_game-webfont.woff2') format('woff2'),
+         local('/fonts/omori_game-webfont.woff') format('woff'),
+         local('/fonts/OMORI_GAME.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -39,9 +39,9 @@
 
 @font-face {
     font-family: 'omorigame2';
-    src: url('/fonts/omori_game2-webfont.woff2') format('woff2'),
-         url('/fonts/omori_game2-webfont.woff') format('woff'),
-         url('/fonts/OMORI_GAME2.ttf') format('truetype');
+    src: local('/fonts/omori_game2-webfont.woff2') format('woff2'),
+         local('/fonts/omori_game2-webfont.woff') format('woff'),
+         local('/fonts/OMORI_GAME2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -52,9 +52,9 @@
 
 @font-face {
     font-family: 'rainyhearts';
-    src: url('/fonts/rainyhearts-webfont.woff2') format('woff2'),
-         url('/fonts/rainyhearts-webfont.woff') format('woff'),
-         url('/fonts/rainyhearts.ttf') format('truetype');
+    src: local('/fonts/rainyhearts-webfont.woff2') format('woff2'),
+         local('/fonts/rainyhearts-webfont.woff') format('woff'),
+         local('/fonts/rainyhearts.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 

@@ -40,38 +40,26 @@ function play(index) {
     player.volume = 0.025;
     player.play();
 
-    if(player.src = audioFiles[0]) {
-        songtitle.innerHTML = "Song: ANOTHER HIM - Toby Fox";        
-    } else if (player.src = audioFiles[1]) {
-        songtitle.innerHTML = "Song: Charles, Pancakes, and Broccoli - Bee and Puppycat OST";
-    } else if (player.src = audioFiles[2]) {
-        songtitle.innerHTML = "Song: The Heart Pt. 1 - Kendrick Lamar";
-    } else if (player.src = audioFiles[3]) {
-        songtitle.innerHTML = "Song: Golf Results - Wii Sports";
-    }
+    // if(player.src = audioFiles[0]) {
+    //     songtitle.innerHTML = "Song: ANOTHER HIM - Toby Fox";        
+    // } else if (player.src = audioFiles[1]) {
+    //     songtitle.innerHTML = "Song: Charles, Pancakes, and Broccoli - Bee and Puppycat OST";
+    // } else if (player.src = audioFiles[2]) {
+    //     songtitle.innerHTML = "Song: The Heart Pt. 1 - Kendrick Lamar";
+    // } else if (player.src = audioFiles[3]) {
+    //     songtitle.innerHTML = "Song: Golf Results - Wii Sports";
+    // }
 }
 
 function pause(index) {
     player.src = audioFiles[index];
     player.volume = 0.025;
-    player.play();
-
-    if(player.src = audioFiles[0]) {
-        songtitle.innerHTML = "Song: ANOTHER HIM - Toby Fox";        
-    } else if (player.src = audioFiles[1]) {
-        songtitle.innerHTML = "Song: Charles, Pancakes, and Broccoli - Bee and Puppycat OST";
-    } else if (player.src = audioFiles[2]) {
-        songtitle.innerHTML = "Song: The Heart Pt. 1 - Kendrick Lamar";
-    } else if (player.src = audioFiles[3]) {
-        songtitle.innerHTML = "Song: Golf Results - Wii Sports";
-    }
+    player.pause();
 }
     
 function init() {
     // do your stuff here, audio has been loaded
     // for example, play all files one after the other
-    
-
     var i = 0;
 
     play(i);
@@ -90,7 +78,7 @@ function init() {
     next.onclick = function () {
         i++;
         playpause.innerHTML = 'pause';
-        if (i >= audioFiles.length-1) {
+        if (i > audioFiles.length-1) {
             // end to start
             i = 0;
         }
@@ -129,3 +117,15 @@ function init() {
 for (var i in audioFiles) {
     preloadAudio(audioFiles[i]);
 }
+
+/*
+// if(player.src = audioFiles[0]) {
+    //     songtitle.innerHTML = "Song: ANOTHER HIM - Toby Fox";        
+    // } else if (player.src = audioFiles[1]) {
+    //     songtitle.innerHTML = "Song: Charles, Pancakes, and Broccoli - Bee and Puppycat OST";
+    // } else if (player.src = audioFiles[2]) {
+    //     songtitle.innerHTML = "Song: The Heart Pt. 1 - Kendrick Lamar";
+    // } else if (player.src = audioFiles[3]) {
+    //     songtitle.innerHTML = "Song: Golf Results - Wii Sports";
+    // }
+*/

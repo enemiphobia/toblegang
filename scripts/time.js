@@ -33,7 +33,7 @@ function whatsMyName() { // picks a random name each second
 
     // name.style.fontSize = "56px"; 
 
-    let names = ["Enemi.", "Tobi.", "Eminem?", "A Streamer?", "A YouTuber?", "idk....", "melon :>"];
+    let names = ["Enemi.", "Tobi.", "Eminem?", "a kid with dreams :/", "idk....", "melon :>", "silly :3"];
     count++;
 
     document.getElementById("myName").innerHTML = "Hi, I'm " + names[count % (names.length)];

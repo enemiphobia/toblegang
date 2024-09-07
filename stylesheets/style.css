@@ -325,12 +325,13 @@ nav ul li:last-child {
 }
 
 .playermenuwrapper {
-  background: #00000081;
+  background: #0000004d;
   padding: 10px;
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
+  /* position: -webkit-sticky; */
   top: 50px; /* required */
   transform: translate(0,50);
+  z-index: 999;
 }
 
 /* END OF AUDIO PLAYER */

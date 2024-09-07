@@ -22,7 +22,7 @@ var x = setInterval(function() {
   // basically if countdown is finished
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("satTime").innerHTML = "DOOMSDAY IS OVER";
+    document.getElementById("satTime").innerHTML = "DOOMSDAY IS OVER (my sat)";
   }
 }, 1000);
 

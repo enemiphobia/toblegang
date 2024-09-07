@@ -2,7 +2,7 @@
 
 // let player = document.getElementById('mplayer');
 // let audio = document.getElementById('media');
-
+let prefix = "https://enemiphobia.github.io/toblegang"
 
 var audioFiles = [
     "/sounds/ANOTHER HIM.mp3",
@@ -36,7 +36,7 @@ var next = document.getElementById('nextsong');
 var songtitle = document.getElementById('songtitle');
 
 function play(index) {
-    player.src = audioFiles[index];
+    player.src = prefix + audioFiles[index];
     player.volume = 0.025;
     player.play();
 
@@ -52,7 +52,7 @@ function play(index) {
 }
 
 function pause(index) {
-    player.src = audioFiles[index];
+    player.src = prefix + audioFiles[index];
     player.volume = 0.025;
     player.pause();
 }
@@ -60,7 +60,7 @@ function pause(index) {
 function init() {
     // do your stuff here, audio has been loaded
     // for example, play all files one after the other
-    var i = 0;
+    var i = 3;
 
     play(i);
     // previous song
@@ -115,7 +115,7 @@ function init() {
     
 // we start preloading all the audio files
 for (var i in audioFiles) {
-    preloadAudio(audioFiles[i]);
+    preloadAudio(prefix + audioFiles[i]);
 }
 
 /*

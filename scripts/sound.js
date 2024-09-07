@@ -1,84 +1,131 @@
 // get data from the player
 
-let player = document.getElementById('mplayer');
-let audio = document.getElementById('media');
-var playpause = document.getElementById('playpause');
+// let player = document.getElementById('mplayer');
+// let audio = document.getElementById('media');
 
 
-// all the songs in sounds
-let prefix = "https://enemiphobia.github.io/toblegang/";
-let sources = [
-    "sounds/ANOTHER HIM.mp3",
-    "sounds/charles pancakes and broccoli.mp3",
-    "sounds/the heart pt 1.mp3"
+var audioFiles = [
+    "/sounds/ANOTHER HIM.mp3",
+     "/sounds/charles pancakes and broccoli.mp3",
+     "/sounds/the heart pt 1.mp3",
+     "/sounds/golf results.mp3"
 ];
-
-var whichSong = 0;
-player.volume = 0.025;
-
-// player.src = prefix + sources[Math.floor(Math.random()*3)];
-// if (player) {
-player.onload = function () {
-    audio.src = prefix + sources[1];
-    player.volume = 0.025; // suuuuper low
-    player.load();
-    player.play(); // autoplay
-    changesongtitle();
-}
-// }
-
-
-
-playpause.onclick = function () {
     
+function preloadAudio(url) {
+    var audio = new Audio();
+    // once this file loads, it will call loadedAudio()
+    // the file will be kept by the browser as cache
+    audio.addEventListener('canplaythrough', loadedAudio, false);
+    audio.src = url;
+}
+    
+var loaded = 0;
+function loadedAudio() {
+    // this will be called every time an audio file is loaded
+    // we keep track of the loaded files vs the requested files
+    loaded++;
+    if (loaded == audioFiles.length){
+        // all have loaded
+        init();
+    }
+}
+    
+var player = document.getElementById('mplayer');
+var previous = document.getElementById('previoussong');
+var next = document.getElementById('nextsong');
+var songtitle = document.getElementById('songtitle');
+
+function play(index) {
+    player.src = audioFiles[index];
+    player.volume = 0.025;
+    player.play();
+
+    if(player.src = audioFiles[0]) {
+        songtitle.innerHTML = "Song: ANOTHER HIM - Toby Fox";        
+    } else if (player.src = audioFiles[1]) {
+        songtitle.innerHTML = "Song: Charles, Pancakes, and Broccoli - Bee and Puppycat OST";
+    } else if (player.src = audioFiles[2]) {
+        songtitle.innerHTML = "Song: The Heart Pt. 1 - Kendrick Lamar";
+    } else if (player.src = audioFiles[3]) {
+        songtitle.innerHTML = "Song: Golf Results - Wii Sports";
+    }
+}
+
+function pause(index) {
+    player.src = audioFiles[index];
+    player.volume = 0.025;
+    player.play();
+
+    if(player.src = audioFiles[0]) {
+        songtitle.innerHTML = "Song: ANOTHER HIM - Toby Fox";        
+    } else if (player.src = audioFiles[1]) {
+        songtitle.innerHTML = "Song: Charles, Pancakes, and Broccoli - Bee and Puppycat OST";
+    } else if (player.src = audioFiles[2]) {
+        songtitle.innerHTML = "Song: The Heart Pt. 1 - Kendrick Lamar";
+    } else if (player.src = audioFiles[3]) {
+        songtitle.innerHTML = "Song: Golf Results - Wii Sports";
+    }
+}
+    
+function init() {
+    // do your stuff here, audio has been loaded
+    // for example, play all files one after the other
+    
+
+    var i = 0;
+
+    play(i);
+    // previous song
+    previous.onclick = function () {
+        i--;
+        playpause.innerHTML = 'pause';
+
+        if (i < 0) {
+            // start to end
+            i = audioFiles.length-1;
+        }
+        play(i);
+    }
+    // next song
+    next.onclick = function () {
+        i++;
+        playpause.innerHTML = 'pause';
+        if (i >= audioFiles.length-1) {
+            // end to start
+            i = 0;
+        }
+        play(i);
+    }
+
+    let playpause = document.getElementById('playpause');
+
+    playpause.onclick = function () {
+    var player = document.getElementById('mplayer');
     if (player.paused) {
-		changesongtitle();
-        player.play();
+        play(i);
         playpause.innerHTML = 'pause';
     } else {
-        player.pause();
+        pause(i);
         playpause.innerHTML = 'play';
-        changesongtitle();
     }
 }
 
-// previoussong.onclick = function () {
-//     if (whichSong < 1) {
-//         whichSong = sources.length-1;
-//     } else {
-//         whichSong--;
-//     }
+    // once the player ends, play the next one
+    player.onended = function() {
+        i++;
+        if (i >= audioFiles.length) {
+            // end 
+            return;
+        }
+        play(i);
+    };
+    // play the first file
     
-//     player.src = prefix + sources[whichSong];
-//     player.load();
-
-//     changesongtitle();
-//     console.log("previous song: " + whichSong + ", " + player.src + ", " + prefix + sources[whichSong]);
-// }
-
-// nextsong.onclick = function () {
-//     if (whichSong > sources.length-2) {
-//         whichSong = 0;
-//     } else {
-//         whichSong++;
-//     }
-//     player.src = sources[whichSong];
-//     changesongtitle();
-//     console.log("next song: " + whichSong + ", " + player.src + ", " + prefix + sources[whichSong]);
-// }
-
-
-
-function changesongtitle() {
-    let player = document.getElementById('mplayer');
-    let audio = document.getElementById('media');
-	var songtitle = document.getElementById('songtitle');
-
-    if(player.src = prefix + sources[0]) {
-        songtitle.innerHTML = "Song: ANOTHER HIM - Toby Fox";        
-    } else if (player.src = prefix + sources[1]) {
-        songtitle.innerHTML = "Song: Charles, Pancakes, and Broccoli - Bee and Puppycat OST";
-    } else if (player.src = prefix + sources[2]) {
-        songtitle.innerHTML = "Song: The Heart Pt. 1 - Kendrick Lamar";
-    }
+    
+    
+}
+    
+// we start preloading all the audio files
+for (var i in audioFiles) {
+    preloadAudio(audioFiles[i]);
 }

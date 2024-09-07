@@ -4,12 +4,22 @@
 <link href="stylesheets/music.css" rel="stylesheet" type="text/css" media="all">
 <link href="stylesheets/fonts.css" rel="stylesheet" type="text/css" media="all">
   <div class="playermenuwrapper" style="display: flex; top: 0">
-    <audio id="mplayer" class="mediaplayerclass" preload="none">
-      <source id="media" type="audio/mp3" loop="loop"/>
+    <audio id="mplayer" class="mediaplayerclass" preload="auto">
+      <source id="media" type="audio/mp3" loop="loop" src=""/>
   </audio>
  
     <div id="songtitle" class="titleclass" style="align-self: center; justify-content: center;"></div><br>
-      <!-- <button id="previoussong" class="mediabtn"
+    <!-- <ul style="list-style: none">
+      <li>Audio Files
+        <ul id="list">
+          <li><a href="#" data-value="/sounds/ANOTHER HIM.mp3">1</a></li>
+          <li><a href="#" data-value="/sounds/charles pancakes and broccoli.mp3">2</a></li>
+          <li><a href="#" data-value="/sounds/the heart pt 1.mp3">3</a></li>
+          <li><a href="#" data-value="/sounds/golf results.mp3">4</a></li>
+        </ul>
+      </li>
+    </ul> -->
+      <button id="previoussong" class="mediabtn"
       style="width: 160px;
       height: 60px;
       border: 0;
@@ -19,7 +29,7 @@
       text-align: center;
       ">
       Previous
-      </button> -->
+      </button>
 
       <button id="playpause" class="mediabtn"
       style="width: 130px;
@@ -31,10 +41,10 @@
       display: flex;
       text-align: center;
       ">
-      Play
+      Pause
       </button>
 
-      <!-- <button id="nextsong" class="mediabtn"
+      <button id="nextsong" class="mediabtn"
       style="width: 160px;
       height: 60px;
       border: 0;
@@ -44,7 +54,7 @@
       text-align: center;
       ">
       Next
-      </button> -->
+      </button>
       <script src="scripts/sound.js"></script>
     </div><br>
     

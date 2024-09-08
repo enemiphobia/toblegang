@@ -285,7 +285,7 @@ nav ul li:last-child {
 /* AUDIO PLAYER */
 
 .mediabtn {
-  font-family: "Daydream";
+  font-family: "daydream";
   display: flex;
   column-gap: 20px;
   justify-content: center;

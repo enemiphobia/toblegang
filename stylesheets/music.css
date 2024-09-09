@@ -59,7 +59,7 @@
   justify-content: center;
   margin-left:80px;
   height: auto;
-  background: #9c4787;
+  background: var(--dark-color);
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
@@ -76,7 +76,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #ffb2ff;
+  background: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -84,7 +84,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #ffb2ff;
+  background: var(--secondary-color);
   cursor: pointer;
 }
   

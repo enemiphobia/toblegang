@@ -1,5 +1,5 @@
 /* basically imports everything from style.css into here, so less copy-pasting :) */
-@import url("style.css"); 
+@import url("/stylesheets/style.css"); 
 
 /* global variables with colors & transitions */
 :root {

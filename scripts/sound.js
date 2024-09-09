@@ -83,8 +83,6 @@ function init() {
     // for example, play all files one after the other
     var i = Math.floor(Math.random() * audioFiles.length);
     console.log(i);
-
-    play(i);
     // previous song
     previous.onclick = function () {
         i--;

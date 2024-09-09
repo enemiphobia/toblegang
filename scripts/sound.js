@@ -15,7 +15,7 @@ var onInput = function () {
     vol = value; // ACTUALLY changes the volume
 }
 
-range.addEventListener('input', onInput, false);
+
 
 
 
@@ -126,7 +126,7 @@ function init() {
     };
     // play the first file
     
-    
+    range.addEventListener('input', onInput, false);
     
 }
     

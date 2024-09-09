@@ -3,12 +3,29 @@
 // let player = document.getElementById('mplayer');
 // let audio = document.getElementById('media');
 let prefix = "https://enemiphobia.github.io/toblegang"
+let vol = 0.025;
+
+
+
+let range = document.getElementById('volumeSlider');
+
+var onInput = function () {
+    let value = document.getElementById('volumeSlider').value;
+    document.getElementById('rangeValue').textContent = Math.round(value*100) + "%"; // adds a visual
+    vol = value; // ACTUALLY changes the volume
+}
+
+range.addEventListener('input', onInput, false);
+
+
 
 var audioFiles = [
     "/sounds/ANOTHER HIM.mp3",
      "/sounds/charles pancakes and broccoli.mp3",
      "/sounds/the heart pt 1.mp3",
-     "/sounds/golf results.mp3"
+     "/sounds/golf results.mp3",
+     "/sounds/carrot car.mp3",
+     "/sounds/by your side.mp3"
 ];
     
 function preloadAudio(url) {
@@ -37,7 +54,7 @@ var songtitle = document.getElementById('songtitle');
 
 function play(index) {
     player.src = prefix + audioFiles[index];
-    player.volume = 0.025;
+    player.volume = vol;
     player.play();
 
     // if(player.src = audioFiles[0]) {
@@ -53,7 +70,7 @@ function play(index) {
 
 function pause(index) {
     player.src = prefix + audioFiles[index];
-    player.volume = 0.025;
+    player.volume = vol;
     player.pause();
 }
     

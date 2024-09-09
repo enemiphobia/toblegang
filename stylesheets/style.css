@@ -128,6 +128,8 @@ body, html {
   -webkit-backdrop-filter: blur(8px);
 } */
 
+
+
 /* the title of the website */
 .title {
   animation: rainbow 2.5s linear;

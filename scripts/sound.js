@@ -10,9 +10,9 @@ let vol = 0.025;
 let range = document.getElementById('volumeSlider');
 
 var onInput = function () {
-    let value = document.getElementById('volumeSlider').value;
-    document.getElementById('rangeValue').textContent = Math.round(value*100) + "%"; // adds a visual
-    vol = value; // ACTUALLY changes the volume
+    
+    document.getElementById('rangeValue').textContent = Math.round(range.value*100) + "%"; // adds a visual
+    vol = range.value; // ACTUALLY changes the volume
 }
 
 
@@ -25,7 +25,9 @@ var audioFiles = [
      "/sounds/the heart pt 1.mp3",
      "/sounds/golf results.mp3",
      "/sounds/carrot car.mp3",
-     "/sounds/by your side.mp3"
+     "/sounds/by your side.mp3",
+     "/sounds/bee's house.mp3",
+     "/sounds/planetarium.mp3"
 ];
     
 function preloadAudio(url) {
@@ -73,11 +75,18 @@ function pause(index) {
     player.volume = vol;
     player.pause();
 }
-    
+
+range.onchange = function () {
+    player.volume = range.value;
+}
+
+
 function init() {
+    player.volume = range.value;
     // do your stuff here, audio has been loaded
     // for example, play all files one after the other
-    var i = 3;
+    var i = Math.floor(Math.random() * audioFiles.length-1);
+    console.log(i);
 
     play(i);
     // previous song
@@ -102,6 +111,17 @@ function init() {
         play(i);
     }
 
+    // once the player ends, play the next one (exact same thing as nextsong button)
+    player.onended = function() {
+        i++;
+        playpause.innerHTML = 'pause';
+        if (i > audioFiles.length-1) {
+            // end to start
+            i = 0;
+        }
+        play(i);
+    };
+
     let playpause = document.getElementById('playpause');
 
     playpause.onclick = function () {
@@ -115,19 +135,8 @@ function init() {
     }
 }
 
-    // once the player ends, play the next one
-    player.onended = function() {
-        i++;
-        if (i >= audioFiles.length) {
-            // end 
-            return;
-        }
-        play(i);
-    };
+    
     // play the first file
-    
-    range.addEventListener('input', onInput, false);
-    
 }
     
 // we start preloading all the audio files
@@ -135,6 +144,7 @@ for (var i in audioFiles) {
     preloadAudio(prefix + audioFiles[i]);
 }
 
+range.addEventListener('input', onInput, false);
 /*
 // if(player.src = audioFiles[0]) {
     //     songtitle.innerHTML = "Song: ANOTHER HIM - Toby Fox";        

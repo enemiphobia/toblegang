@@ -9,15 +9,11 @@ let vol = 0.025;
 
 let range = document.getElementById('volumeSlider');
 
+// used for eventlistener (more specifically listening to change in volume slider)
 var onInput = function () {
-    
     document.getElementById('rangeValue').textContent = Math.round(range.value*100) + "%"; // adds a visual
     vol = range.value; // ACTUALLY changes the volume
 }
-
-
-
-
 
 var audioFiles = [
     "/sounds/ANOTHER HIM.mp3",
@@ -144,6 +140,7 @@ for (var i in audioFiles) {
     preloadAudio(prefix + audioFiles[i]);
 }
 
+// on change in volume slider !!!!!!!!!!!!!!!!!!!!!!!
 range.addEventListener('input', onInput, false);
 /*
 // if(player.src = audioFiles[0]) {

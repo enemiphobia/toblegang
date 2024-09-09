@@ -85,7 +85,7 @@ function init() {
     player.volume = range.value;
     // do your stuff here, audio has been loaded
     // for example, play all files one after the other
-    var i = Math.floor(Math.random() * audioFiles.length-1);
+    var i = Math.floor(Math.random() * audioFiles.length);
     console.log(i);
 
     play(i);

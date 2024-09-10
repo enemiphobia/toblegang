@@ -1,5 +1,5 @@
 /* basically imports everything from style.css into here, so less copy-pasting :) */
-@import url("/stylesheets/style.css"); 
+@import url("style.css"); 
 
 body {
     background-color: var(--dark-color);

@@ -23,7 +23,8 @@ var audioFiles = [
      "/sounds/carrot car.mp3",
      "/sounds/by your side.mp3",
      "/sounds/bee's house.mp3",
-     "/sounds/planetarium.mp3"
+     "/sounds/planetarium.mp3",
+     "/sounds/subwoofer lullaby.mp3"
 ];
     
 function preloadAudio(url) {

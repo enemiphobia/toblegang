@@ -226,3 +226,18 @@ p {
 li {
   text-shadow:2px 2px 0 #000000;
 }
+
+a {
+  
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--hof-gold-light);
+  transition: color 1s;
+  transition-timing-function: cubic-bezier(.04,.43,.12,.93);
+  transition-duration: 0.25s;
+
+}
+
+a:hover {
+  color: #efe2b7;
+}

@@ -31,13 +31,16 @@ html {
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
   overflow-x: hidden;
+
+  /* MOUSE CURSOR */
+  /* cursor: url("/images/cursor.png"), auto; */
 }
 
 body {
   background-color: var(--primary-color);
   color: white;
   font-family: "daydream";
-
+  
   padding: 0;
   margin: 0;
   text-align: center;

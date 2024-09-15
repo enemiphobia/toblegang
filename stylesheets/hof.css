@@ -240,4 +240,5 @@ a {
 
 a:hover {
   color: #efe2b7;
+  cursor: pointer;
 }

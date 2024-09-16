@@ -5,7 +5,7 @@
 let prefix = "https://enemiphobia.github.io/toblegang"
 let vol = 0.025;
 
-
+console.log("HEY! Why are you here....");
 
 let range = document.getElementById('volumeSlider');
 
@@ -83,7 +83,7 @@ function init() {
     // do your stuff here, audio has been loaded
     // for example, play all files one after the other
     var i = Math.floor(Math.random() * audioFiles.length);
-    console.log(i);
+    console.log(i + ", " + audioFiles[i]);
     // previous song
     previous.onclick = function () {
         i--;

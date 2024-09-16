@@ -5,7 +5,8 @@
 :root {
     --primary-color: #e0ab1f;
     --secondary-color: #fbd736;
-    --dark-color: #c16b03;
+    /* dark-color was originally #c16b03 */
+    --dark-color: #8f563b; 
     --hof-primary: #8f563b;
     --hof-secondary: #663931;
     --hof-gold: #e0ab1f;

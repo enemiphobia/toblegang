@@ -1,5 +1,5 @@
 // set the date we're counting down to
-var countDownDate = new Date("August 24, 2024 06:30:00").getTime();
+var countDownDate = new Date("October 2, 2024 06:30:00").getTime();
 
 // update the count down every 1 second
 var x = setInterval(function() {
@@ -22,7 +22,7 @@ var x = setInterval(function() {
   // basically if countdown is finished
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("satTime").innerHTML = "DOOMSDAY IS OVER (my sat)";
+    document.getElementById("satTime").innerHTML = "nmsqt countdown has ended";
   }
 }, 1000);
 

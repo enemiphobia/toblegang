@@ -42,11 +42,14 @@
   
   .playermenuwrapper {
     background: #00000081;
+    z-index: 20;
+    overflow: hidden;
     padding: 10px;
-    position: sticky;
-    position: -webkit-sticky;
-    top: 50px; /* required */
-    transform: translate(0,50);
+    position: fixed;
+    /* position: -webkit-sticky; */
+    bottom: 0;
+    width: 100%;
+    /* transform: translate(0,50); */
   }
 
   /* VOLUME SLIDER */

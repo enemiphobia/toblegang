@@ -191,7 +191,7 @@ nav {
   align-items: center;
   
   margin-bottom:25px;
-  z-index: 999999;
+  z-index: 99999;
   filter: drop-shadow(20px 20px 4px #10101146);
 }
 
@@ -335,6 +335,8 @@ nav ul li:last-child {
   position: fixed;
   /* position: -webkit-sticky; */
   top: 50px; /* required */
+  bottom: 0;
+  width: 100%;
   transform: translate(0,50);
   z-index: 999;
 }

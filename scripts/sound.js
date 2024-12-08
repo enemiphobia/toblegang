@@ -9,6 +9,9 @@ console.log("HEY! Why are you here....");
 
 let range = document.getElementById('volumeSlider');
 
+// on init
+// document.getElementById('songtitle').innerHTML = "yea";
+
 // used for eventlistener (more specifically listening to change in volume slider)
 var onInput = function () {
     document.getElementById('rangeValue').textContent = Math.round(range.value*100) + "%"; // adds a visual

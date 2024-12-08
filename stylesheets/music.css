@@ -41,11 +41,12 @@
   }
   
   .playermenuwrapper {
-    background: #00000081;
+    background: #00000046;
     z-index: 20;
     overflow: hidden;
-    padding: 10px;
-    position: fixed;
+    padding: 15px;
+    position: sticky;
+    display: flex;
     /* position: -webkit-sticky; */
     bottom: 0;
     width: 100%;

@@ -86,8 +86,8 @@ body, html {
   text-align: center;
   min-height: 1024px;
   line-height: 1024px; /* makes the text height centered */
-  mask: linear-gradient(to top, white 55%, transparent);
-  -webkit-mask: -webkit-gradient(linear, left 55%, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+  mask: linear-gradient(to bottom, white 55%, transparent);
+  -webkit-mask: -webkit-gradient(linear, left 55%, to top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
   mask-position: fixed;
 }
 
@@ -334,7 +334,7 @@ nav ul li:last-child {
   padding: 10px;
   position: fixed;
   /* position: -webkit-sticky; */
-  top: 50px; /* required */
+  top: 0;
   bottom: 0;
   width: 100%;
   transform: translate(0,50);
